@@ -48,7 +48,7 @@ const Header = () => {
           </div>
         </nav>
         {open && 
-          <nav>
+          <nav className='z-99'>
             <div className="absolute top-0 w-60 bg-white p-6">
               <div className="flex space-x-6 mb-6">
                 <span onClick={() => setOpen(false)}>

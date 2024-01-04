@@ -64,7 +64,7 @@ const AboutPage = () => {
         <div className="py-16">
             <div className="container m-auto space-y-8 px-6 md:px-12 lg:px-20">
                 <div>
-                <h2 className="mt-4 text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl">
+                <h2 className="mt-4 text-center text-2xl font-bold text-gray-800 md:text-4xl">
                     A technology-first approach to payments <br className="lg:block" hidden />
                     and finance
                 </h2>

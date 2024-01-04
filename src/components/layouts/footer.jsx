@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="w-full bg-[#100F0FD6] py-16">
       <div className="md:px-12 lg:px-28">
-        <div className="container m-auto space-y-6 text-gray-600 dark:text-gray-300">
+        <div className="container m-auto space-y-6 text-gray-300 ">
           <img src="images/logo.svg" alt="logo tailus" className="m-auto w-40" />
           <ul
             className="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
