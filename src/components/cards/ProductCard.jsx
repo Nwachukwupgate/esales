@@ -1,11 +1,26 @@
 import CustomButton from "../button/Button";
 
-const ProductCard = ({ title, description, price, image }) => (
+const ProductCard = ({ title, description, price, image }) => {
+  const handleButtonClick = () => {
+    // Replace the phone number and message with your desired values
+    console.log("log, clicked");
+    const phoneNumber = '08028289962';
+    const message = encodeURIComponent('I would like to pay for your product.');
+
+    // Construct the WhatsApp URL
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    console.log("log, done");
+
+    // Open WhatsApp in a new tab/window
+    window.open(whatsappUrl, '_blank');
+  };
+
+  return (
   <div className="relative group overflow-hidden rounded-lg">
     
-    <a className="absolute inset-0 z-10" href="google">
+    {/* <a className="absolute inset-0 z-10" href="google">
     <span className="sr-only">Buy Item</span>
-    </a>
+    </a> */}
     
     <img
       src={image}
@@ -18,10 +33,14 @@ const ProductCard = ({ title, description, price, image }) => (
     <div className="bg-white p-4">
       <h3 className="font-semibold text-lg md:text-xl">{title}</h3>
       <p className="text-sm text-gray-500">{description}</p>
-      <h4 className="font-semibold text-base md:text-lg">{`$${price}`}</h4>
-      <CustomButton className="mt-2">Buy Now</CustomButton>
+      <h4 className="font-semibold text-base md:text-lg">{`#${price}`}</h4>
+      <div onClick={handleButtonClick}>
+        <CustomButton className="mt-2 bg-red-600 text-white px-4 py-2 rounded-lg">Buy Now</CustomButton>
+      </div>
+      
     </div>
   </div>
 );
+}
 
 export default ProductCard;

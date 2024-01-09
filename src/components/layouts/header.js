@@ -1,74 +1,155 @@
-import React, {useState} from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'
 
 const Header = () => {
-    const [open, setOpen] = useState(false);
-    const [search, setSearch] = useState('');
+
+    const primaryColors = {
+      50: '#eff6ff',
+      100: '#dbeafe',
+      200: '#bfdbfe',
+      300: '#93c5fd',
+      400: '#60a5fa',
+      500: '#3b82f6',
+      600: '#2563eb',
+      700: '#1d4ed8',
+      800: '#1e40af',
+      900: '#1e3a8a',
+      950: '#172554'
+    };
+
   return (
     <header>
-        <nav>
-          <div className="flex justify-between px-12  items-center py-4">
-            <div className="flex space-x-16 items-center">
-              <div onClick={() => setOpen(true)}>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 cursor-pointer text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
-                </svg>
-              </div>
-              {/* <h1 className="text-white font-bold text-xl tracking-wide cursor-pointer">Tubemixza</h1> */}
-              <div className="flex items-center max-w-md mx-auto border-b-2 border-solid border-gray-400 rounded-lg" x-data="{ search: '' }">
-                <div className="w-full">
-                  <input
-                    type="search"
-                    className="w-full px-4 py-1 text-gray-600 rounded-full focus:outline-none bg-inherit"
-                    placeholder="search"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <button
-                    type="submit"
-                    className={`flex items-center justify-center w-12 h-12 text-red-600 rounded-r-lg ${
-                      search.length > 0 ? 'bg-purple-500' : ' cursor-not-allowed'
-                    }`}
-                    disabled={search.length === 0}
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                  </button>
-                </div>
-              </div>
-            </div>
-            {/* <ul className="flex space-x-6">
-              <li className="text-white text-lg font-semibold tracking-normal cursor-pointer">Home</li>
-              <li className="text-white text-lg font-semibold tracking-normal cursor-pointer">About</li>
-              <li className="text-white text-lg font-semibold tracking-normal cursor-pointer">Contact</li>
-            </ul> */}
-            <h1 className="text-red-600 font-bold text-xl tracking-wide cursor-pointer">Tubemixza</h1>
+      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
+        <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
+          <a href="https://flowbite.com" className="flex items-center">
+            <img
+              src="https://flowbite.com/docs/images/logo.svg"
+              className="mr-3 h-6 sm:h-9"
+              alt="Flowbite Logo"
+            />
+            <span className="self-center text-xl font-semibold whitespace-nowrap ">
+              Flowbite
+            </span>
+          </a>
+          <div className="flex items-center lg:order-2">
+            <Link to="/product">
+              <p
+                className="text-[#d71300]  hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-base px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
+              >
+                Product
+              </p>
+            </Link>
+            <a
+              href="#"
+              className={`text-white bg-${primaryColors[500]} hover:bg-${primaryColors[600]} focus:ring-4 focus:ring-${primaryColors[300]} font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none `}
+            >
+              Get started
+            </a>
+            <button
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                className="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </button>
           </div>
-        </nav>
-        {open && 
-          <nav className='z-99'>
-            <div className="absolute top-0 w-60 bg-white p-6">
-              <div className="flex space-x-6 mb-6">
-                <span onClick={() => setOpen(false)}>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </span>
-                <h1>Dashboard</h1>
-              </div>
-              <ul className="flex flex-col space-y-6 mt-14 border-t py-6">
-                <li className="hover:bg-red-500 transition duration-500">Home</li>
-                <li>Products</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Logout</li>
-              </ul>
-            </div>
-          </nav>
-        }
-      </header>
+          <div
+            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            id="mobile-menu-2"
+          >
+            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+              {/* Apply primary color for the "Home" link */}
+              <li>
+                <Link to="/">
+                  <p
+                    className={`block py-2 pr-4 pl-3 text-white rounded bg-${primaryColors[500]} lg:bg-transparent lg:text-${primaryColors[500]} lg:p-0 `}
+                    aria-current="page"
+                  >
+                    Home
+                  </p>
+                </Link>
+              </li>
+              <li>
+                <Link to="/project">
+                  <p
+                    className={`block py-2 pr-4 pl-3 text-white rounded bg-${primaryColors[500]} lg:bg-transparent lg:text-${primaryColors[500]} lg:p-0 `}
+                    aria-current="page"
+                  >
+                    Project
+                  </p>
+                </Link>
+              </li>
+              {/* Apply primary color for the "Company" link */}
+              <li>
+                <Link to="/about">
+                  <p
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 `}
+                  >
+                    About
+                  </p>
+                </Link>
+              </li>
+              {/* Apply primary color for the "Marketplace" link */}
+              <li>
+                <Link to="/work">
+                  <p
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 `}
+                  >
+                    Work
+                  </p>
+                </Link>
+              </li>
+              {/* Apply primary color for the "Features" link */}
+              <li>
+                <Link to="/process">
+                  <p
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0`}
+                  >
+                    Process
+                  </p>
+                </Link>
+              </li>
+              {/* Apply primary color for the "Team" link */}
+              <li>
+                <Link to="/contact">
+                  <p
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0`}
+                  >
+                    Contact
+                  </p>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   )
 }
 

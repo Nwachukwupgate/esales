@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 const ImageWithLink = ({ imageUrl, title, linkTo }) => {
   return (
     <div className="flex flex-col items-center">
-      <a href={linkTo} target="_blank" rel="noopener noreferrer">
+      <Link to={linkTo}>
         <img
           src={imageUrl}
           alt={title}
@@ -11,7 +12,7 @@ const ImageWithLink = ({ imageUrl, title, linkTo }) => {
           width={1120} // Set the desired width
           height={1279} // Set the desired height
         />
-      </a>
+      </Link>
       <p className="mt-2 text-sm font-normal">{title}</p>
     </div>
   );

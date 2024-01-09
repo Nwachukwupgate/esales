@@ -8,6 +8,10 @@ import AboutPage from './pages/about';
 import WorkPage from './pages/work';
 import ProcessPage from './pages/process';
 import ContactPage from './pages/contact';
+import ProjectPage from './pages/project';
+import ProductCard from './components/cards/ProductCard';
+import ProductsPage from './pages/products';
+import DetailsPage from './pages/details';
 
 function App() {
 
@@ -20,6 +24,9 @@ function App() {
         <Route path="/work" element={ <WorkPage /> } />
         <Route path="/process" element={ <ProcessPage /> } /> 
         <Route path="/contact" element={ <ContactPage /> } /> 
+        <Route path="/product" element={ <ProjectPage /> } /> 
+        <Route path="/project" element={ <ProductsPage /> } />  
+        <Route path="/detail/:id" element={ <DetailsPage /> } />  
       </Routes>
       <Footer />
     </div>
