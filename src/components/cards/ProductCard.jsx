@@ -18,10 +18,6 @@ const ProductCard = ({ title, description, price, image }) => {
   return (
   <div className="relative group overflow-hidden rounded-lg">
     
-    {/* <a className="absolute inset-0 z-10" href="google">
-    <span className="sr-only">Buy Item</span>
-    </a> */}
-    
     <img
       src={image}
       alt={title}
@@ -30,12 +26,12 @@ const ProductCard = ({ title, description, price, image }) => {
       height="300"
       style={{ aspectRatio: "300 / 300", objectFit: "cover" }}
     />
-    <div className="bg-white p-4">
+    <div className="bg-white p-4 text-center">
       <h3 className="font-semibold text-lg md:text-xl">{title}</h3>
-      <p className="text-sm text-gray-500">{description}</p>
+      <p className="text-base text-gray-500">{description}</p>
       <h4 className="font-semibold text-base md:text-lg">{`#${price}`}</h4>
       <div onClick={handleButtonClick}>
-        <CustomButton className="mt-2 bg-red-600 text-white px-4 py-2 rounded-lg">Buy Now</CustomButton>
+        <CustomButton className="mt-2 bg-[#c4a76d] text-white px-4 py-2 rounded-lg md:text-lg">Buy Now</CustomButton>
       </div>
       
     </div>

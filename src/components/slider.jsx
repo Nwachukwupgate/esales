@@ -21,7 +21,7 @@ const ImageSlider = ({ images }) => {
     const typed = new Typed(el.current, {
       strings: ["Luxury", "Fittings", "Furnitures"], // Strings to display
       // Speed settings, try diffrent values untill you get good results
-      startDelay: 300,
+      startDelay: 100,
       typeSpeed: 100,
       backSpeed: 100,
       backDelay: 100,
@@ -50,12 +50,13 @@ const ImageSlider = ({ images }) => {
       
         {images.map((image, index) => (
           <SwiperSlide key={index}>    
-          <div className="relative h-[35rem]">
-            <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h1 className="text-7xl font-bold text-[#d71300]">Welcome to <span ref={el}></span></h1>
-            </div>
-          </div>       
+            <div className="relative h-screen">
+              <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black opacity-60"></div>
+                <h1 className="text-8xl font-bold text-white z-10">Welcome to <span ref={el}></span></h1>
+              </div>
+            </div>         
           </SwiperSlide>
         ))}
       

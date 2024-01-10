@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -19,22 +19,22 @@ const Header = () => {
 
   return (
     <header>
-      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
+      <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-          <a href="https://flowbite.com" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="mr-3 h-6 sm:h-9"
-              alt="Flowbite Logo"
+              src="https://sidorluxury.com/assets/images/logo/logo.png"
+              className="mr-3 h-16 sm:h-9"
+              alt="Sidorluxury Logo"
             />
-            <span className="self-center text-xl font-semibold whitespace-nowrap ">
-              Flowbite
-            </span>
-          </a>
+            {/* <span className="self-center text-xl font-semibold whitespace-nowrap ">
+              Sidorluxury
+            </span> */}
+          </Link>
           <div className="flex items-center lg:order-2">
             <Link to="/product">
               <p
-                className="text-[#d71300]  hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-base px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
+                className="text-[#c4a76d] hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-xl px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none "
               >
                 Product
               </p>
@@ -98,8 +98,7 @@ const Header = () => {
               <li>
                 <Link to="/project">
                   <p
-                    className={`block py-2 pr-4 pl-3 text-white rounded bg-${primaryColors[500]} lg:bg-transparent lg:text-${primaryColors[500]} lg:p-0 `}
-                    aria-current="page"
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 text-xl`}
                   >
                     Project
                   </p>
@@ -109,7 +108,7 @@ const Header = () => {
               <li>
                 <Link to="/about">
                   <p
-                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 `}
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 text-xl`}
                   >
                     About
                   </p>
@@ -119,7 +118,7 @@ const Header = () => {
               <li>
                 <Link to="/work">
                   <p
-                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 `}
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 text-xl`}
                   >
                     Work
                   </p>
@@ -129,7 +128,7 @@ const Header = () => {
               <li>
                 <Link to="/process">
                   <p
-                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0`}
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 text-xl`}
                   >
                     Process
                   </p>
@@ -139,7 +138,7 @@ const Header = () => {
               <li>
                 <Link to="/contact">
                   <p
-                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0`}
+                    className={`block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-${primaryColors[500]} lg:p-0 text-xl`}
                   >
                     Contact
                   </p>

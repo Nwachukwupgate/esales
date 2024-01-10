@@ -43,74 +43,74 @@ const IndexPage = () => {
     <div>
       
         <ImageSlider images={images}/>
-        <div className="relative my-6">
-          
-          <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:mx-12 lg:grid-cols-3 gap-4 p-4">
-            {/* <div>
-              <h2 className="text-4xl font-semibold">Products</h2>
-              <h2 className="text-4xl font-semibold mt-4">Portfolio</h2>
-            </div> */}
-            {project.map(({ id, name, description, price, image }) => (
-              <ProductCard
-                key={id}
-                id={id}
-                title={name}
-                description={description}
-                price={price}
-                image={image}
-              />
-            ))}
-          </section>    
-        </div>
-        
-        <div className="relative mt-4">
-          <div className="flex justify-center items-center">
-            <ImageWithLink
-              imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image2.jpeg"
-              title="About"
-              linkTo="/about"
-            />
+        <div className='container flex flex-col justify-center mx-auto'>
+          <div className="relative my-12">
+            
+            <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:mx-12 lg:grid-cols-3 gap-4 p-4">
+              {project?.slice(0, 3)?.map(({ id, name, description, price, image }) => (
+                <ProductCard
+                  key={id}
+                  id={id}
+                  title={name}
+                  description={description}
+                  price={price}
+                  image={image}
+                />
+              ))}
+            </section>    
           </div>
-        </div>
+          
 
-        <div className="flex justify-center items-center mt-4">
-            <ImageWithLink
-              imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image4-scaled.jpeg"
-              title="Work"
-              linkTo="/work"
-            />
-        </div>
+          <div className="flex justify-center items-center mt-6">
+              <ImageWithLink
+                imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image4-scaled.jpeg"
+                title="Project"
+                linkTo="/project"
+              />
+          </div>
 
-        <div className="flex justify-center items-center mt-4">
-            <ImageWithLink
-              imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image5.jpeg"
-              title="Process"
-              linkTo="/process"
-            />
-        </div>
+          <div className="flex justify-center items-center mt-6">
+              <ImageWithLink
+                imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image5.jpeg"
+                title="Product"
+                linkTo="/product"
+              />
+          </div>
+          
+          <div className="relative mt-6">
+            <div className="flex justify-center items-center">
+              <ImageWithLink
+                imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image2.jpeg"
+                title="About"
+                linkTo="/about"
+              />
+            </div>
+          </div>
 
-        <div className="flex justify-center items-center my-4">
-            <ImageWithLink
-              imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image3.jpeg"
-              title="Contact"
-              linkTo="/contact"
-            />
-        </div>   
+          <div className="flex justify-center items-center mt-6">
+              <ImageWithLink
+                imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image4-scaled.jpeg"
+                title="Work"
+                linkTo="/work"
+              />
+          </div>
 
-        <div className="flex justify-center items-center mt-4">
-            <ImageWithLink
-              imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image4-scaled.jpeg"
-              title="Project"
-              linkTo="/project"
-            />
-        </div>
+          <div className="flex justify-center items-center mt-6">
+              <ImageWithLink
+                imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image5.jpeg"
+                title="Process"
+                linkTo="/process"
+              />
+          </div>
 
-        <div className="flex justify-center items-center mt-4">
-            <ImageWithLink
-              imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image5.jpeg"
-              title="Product"
-              linkTo="/product"
-            />
+          <div className="flex justify-center items-center my-6">
+              <ImageWithLink
+                imageUrl="https://vivabelladesigns.com/wp-content/uploads/2022/04/image3.jpeg"
+                title="Contact"
+                linkTo="/contact"
+              />
+          </div>   
+
         </div>
 
     </div>

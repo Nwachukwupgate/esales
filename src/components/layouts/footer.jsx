@@ -1,18 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="w-full bg-[#100F0FD6] py-16">
       <div className="md:px-12 lg:px-28">
         <div className="container m-auto space-y-6 text-gray-300 ">
-          <img src="images/logo.svg" alt="logo tailus" className="m-auto w-40" />
+          <img src="https://sidorluxury.com/assets/images/logo/logo.png" alt="logo tailus" className="m-auto w-60" />
           <ul
             className="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
           >
-            <li ><a href="google" className="hover:text-primary">Home</a></li>
-            <li ><a href="google" className="hover:text-primary">Features</a></li>
-            <li ><a href="google" className="hover:text-primary">Get started</a></li>
-            <li ><a href="google" className="hover:text-primary">About us</a></li>
+            <li ><Link to="/" className="text-lg">Home</Link></li>
+            <li ><Link to="/product" className="text-lg">Product</Link></li>
+            <li ><Link to="/project" className="text-lg">Project</Link></li>
+            <li ><Link to="/about" className="text-lg">About us</Link></li>
           </ul>
           <div className="m-auto flex w-max items-center justify-between space-x-4">
             <a href="tel:+243996660436" aria-label="call">
@@ -68,7 +69,7 @@ const Footer = () => {
 
           <div className="text-center">
             <span className="text-sm tracking-wide">
-              Copyright © tailus <span id="year"></span> | All right reserved
+              Copyright © Sido Luxury <span id="year"></span> | All right reserved
             </span>
           </div>
         </div>

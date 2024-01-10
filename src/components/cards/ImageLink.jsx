@@ -13,7 +13,7 @@ const ImageWithLink = ({ imageUrl, title, linkTo }) => {
           height={1279} // Set the desired height
         />
       </Link>
-      <p className="mt-2 text-sm font-normal">{title}</p>
+      <p className="mt-2 text-base font-normal">{title}</p>
     </div>
   );
 };
