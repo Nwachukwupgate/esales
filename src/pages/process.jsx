@@ -7,7 +7,7 @@ const ProcessPage = () => {
   return (
     <div className="container my-12">
         <div className='relative my-4'>
-            <img src="https://vivabelladesigns.com/wp-content/uploads/2020/11/005.jpg" alt="process" width="1088" height="200" className='mx-auto' style={{ objectFit: 'cover', height: '200px' }} />
+            <img src="https://gmhluxury.com/wp-content/uploads/2021/05/Caronchi_Photography_190803_0111_small.jpg" alt="process" width="1088" height="200" className='mx-auto' style={{ objectFit: 'cover', height: '200px' }} />
             <p className="text-5xl font-semibold absolute bottom-0 left-0  ml-24 text-black bg-white p-6">Our Process</p>
         </div>
 

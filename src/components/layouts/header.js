@@ -24,7 +24,7 @@ const Header = () => {
           <Link to="/" className="flex items-center">
             <img
               src="https://sidorluxury.com/assets/images/logo/logo.png"
-              className="mr-3 h-16 sm:h-9"
+              className="mr-3 h-9 md:h-16"
               alt="Sidorluxury Logo"
             />
             {/* <span className="self-center text-xl font-semibold whitespace-nowrap ">
@@ -39,12 +39,7 @@ const Header = () => {
                 Product
               </p>
             </Link>
-            <a
-              href="#"
-              className={`text-white bg-${primaryColors[500]} hover:bg-${primaryColors[600]} focus:ring-4 focus:ring-${primaryColors[300]} font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2  focus:outline-none `}
-            >
-              Get started
-            </a>
+            
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
