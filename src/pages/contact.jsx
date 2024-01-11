@@ -1,6 +1,11 @@
 import React from 'react'
+import { useForm } from '@formspree/react';
 
 const ContactPage = () => {
+    const [state, handleSubmit] = useForm("xnqennrj");
+    if (state.succeeded) {
+        return <p>Thanks for joining!</p>;
+    }
   return (
     <div>
         <div>
@@ -79,7 +84,7 @@ const ContactPage = () => {
                     </div>
 
                     <div className="p-4 py-6 rounded-lg bg-gray-50 md:p-8">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div classNamess="-mx-2 md:items-center md:flex">
                                 <div className="flex-1 px-2">
                                     <label className="block mb-2 text-lg text-gray-600">First Name</label>
@@ -102,7 +107,7 @@ const ContactPage = () => {
                                 <textarea className="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 focus:border-[#c4a76d] focus:ring-[#c4a76d] focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Message"></textarea>
                             </div>
 
-                            <button class="w-full px-6 py-3 mt-4 text-lg font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#c4a76d] rounded-lg hover:bg-[#c4a76d] focus:outline-none focus:ring focus:ring-[#c4a76d] focus:ring-opacity-50">
+                            <button class="w-full px-6 py-3 mt-4 text-lg font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#c4a76d] rounded-lg hover:bg-[#c4a76d] focus:outline-none focus:ring focus:ring-[#c4a76d] focus:ring-opacity-50" onClick={handleSubmit}>
                                 Send message
                             </button>
                         </form>

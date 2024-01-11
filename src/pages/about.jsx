@@ -7,8 +7,12 @@ const AboutPage = () => {
         <div className='container mx-auto'>
             <div className='flex'>
                 <div className='relative md:basis-[55%]'>
-                    <div className='bg-blue-400 h-[870px] w-[60%]'></div>
-                    <div className='bg-red-400 h-[450px] top-48 left-[19rem] absolute w-[40%]'></div>
+                    <div className='bg-blue-400 h-[870px] w-[60%]'>
+                        <img src="https://gmhluxury.com/wp-content/uploads/2023/09/yht.png" alt="user bg"  width="100%" height="100%" className='w-full h-full object-cover object-center' />
+                    </div>
+                    <div className='bg-red-400 h-[450px] top-48 left-[19rem] absolute w-[40%]'>
+                        <img src="https://sidorluxury.com/assets/images/team/t1.jpg" alt="user" width="100%" height="100%" className='w-full h-full' />
+                    </div>
                 </div>
 
                 <div className='md:basis-[45%]'>
