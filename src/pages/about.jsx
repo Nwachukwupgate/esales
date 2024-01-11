@@ -12,9 +12,9 @@ const AboutPage = () => {
                 </div>
 
                 <div className='md:basis-[45%]'>
-                    <div className='pt-24 pr-12 text-left space-y-4'>
+                    <div className='text-lg pt-24 text-center md:pr-12 md:text-left space-y-4'>
                         <p>
-                        <span className='first-letter text-6xl float-left clear-left text-red-500 mr-2'>W</span>elcome to S’idor Luxury, your premier destination for exquisite interior design in Lagos, Nigeria. With an illustrious track record spanning over two decades, we have consistently delivered top-tier interior design services. Our specialization extends to impeccable finishing, lavish furnishing, meticulous remodeling, and dependable repair services. 
+                        <span className='first-letter text-6xl float-left clear-left text-[#c4a76d] mr-2'>W</span>elcome to S’idor Luxury, your premier destination for exquisite interior design in Lagos, Nigeria. With an illustrious track record spanning over two decades, we have consistently delivered top-tier interior design services. Our specialization extends to impeccable finishing, lavish furnishing, meticulous remodeling, and dependable repair services. 
                         </p>
 
                         <p>
@@ -25,17 +25,15 @@ const AboutPage = () => {
                         At S’idor Luxury, we hold customer satisfaction as our paramount goal. We invest the time to deeply understand your needs, budget, and timeline. This personalized approach enables us to craft tailor-made solutions that precisely align with your requirements. Our philosophy revolves around getting it right the first time, ensuring that you are wholly content with the results.
                         </p>
 
-                        {/* <p>
-                        Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. 
+                        <p>
+                        We continually strive to surpass customer expectations with every project we undertake. S’idor Luxury is your trusted partner in creating captivating and captivating interior spaces that reflect your unique vision and style.
                         </p>
 
-                        <p>
-                        Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.
-                        </p> */}
+                        
                     </div>
 
                     <div className='mt-8'>
-                        <img src="https://vivabelladesigns.com/wp-content/uploads/2020/11/signature-final.png" alt="signature" width="200" height="200" />
+                        <img src="https://vivabelladesigns.com/wp-content/uploads/2020/11/signature-final.png" alt="signature" width="200" height="200" className='block mx-auto md:mx-0' />
                     </div>
                 </div>          
             </div>
@@ -44,20 +42,20 @@ const AboutPage = () => {
                 <div className="text-center">
                     <img src="https://vivabelladesigns.com/wp-content/uploads/2022/05/Logo-Icon-600x597.png" alt="tag" width="260" height="260" className='mx-auto'/>
 
-                    <h3 className="text-4xl font-normal mt-4">The VIVABELLA Story</h3>
+                    <h3 className="text-4xl font-bold mt-4">S’idor Luxury Certified Partners</h3>
                 </div>
 
                 <div className='pt-10 text-center md:w-[40%] space-y-4'>
-                    <p>
-                    <span className='first-letter text-6xl float-left clear-left text-red-500'>L</span>orem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
+                    <p className='text-lg'>
+                    <span className='first-letter text-6xl float-left clear-left text-[#c4a76d]'>A</span>t S’idor Luxury, our Certified Partners program celebrates exceptional talent in interior design.
                     </p>
 
                     <p>
-                    Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla vel, aliquet nec. 
+                    Join a community of innovative professionals dedicated to creating inspiring spaces. Gain exclusive resources and support while contributing to the future of design excellence.  
                     </p>
 
                     <p>
-                    Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eu. 
+                    Together, let's elevate the art of interior design. 
                     </p>                   
                 </div>
             </div>
@@ -65,15 +63,16 @@ const AboutPage = () => {
             <div className="py-16">
                 <div className="container m-auto space-y-8 px-6 md:px-12 lg:px-20">
                     <div>
-                    <h2 className="mt-4 text-center text-2xl font-bold text-gray-800 md:text-4xl">
-                        A technology-first approach to payments <br className="lg:block" hidden />
-                        and finance
-                    </h2>
+                        <h2 className="mt-4 text-center text-2xl font-bold text-gray-800 md:text-4xl">
+                            Our Services
+                        </h2>
                     </div>
                     <div className="mt-16 grid gap-8 sm:grid-cols-2 md:-mx-8 lg:grid-cols-3">
-                    <FeatureCard number="1" title="First feature" description="Quae accusantium, laudantium recusandae tenetur fugiat non cum doloribus aperiam voluptates nostrum." imageUrl="https://cdn-icons-png.flaticon.com/512/7983/7983132.png" />
-                    <FeatureCard number="2" title="Second feature" description="Quae accusantium, laudantium recusandae tenetur fugiat non cum doloribus aperiam voluptates nostrum." imageUrl="https://cdn-icons-png.flaticon.com/512/7983/7983306.png" />
-                    <FeatureCard number="3" title="Third feature" description="Quae accusantium, laudantium recusandae tenetur fugiat non cum doloribus aperiam voluptates nostrum." imageUrl="https://cdn-icons-png.flaticon.com/512/7983/7983333.png" />
+                    <FeatureCard number="1" title="Design consultancy" description="Our expert team offers personalized design consultations to transform your space. We provide comprehensive guidance on layout, color schemes, furniture selection, and decor, tailored to your unique style and requirements." imageUrl="https://sidorluxury.com/assets/images/services/s1.jpg" />
+
+                    <FeatureCard number="2" title="Turn-key Project solutions" description="We offer turnkey corporate, commercial, retail, hospitality and luxury residential interior design, interior architecture, project management and bespoke furniture design services to private individuals and property developers." imageUrl="https://sidorluxury.com/assets/images/services/s2.jpg" />
+
+                    <FeatureCard number="3" title="Interior design and fit-out" description="Interior design and fit-out services offered by our company aim to transform spaces into functional and aesthetically pleasing environments. Our fit-out services focus on the implementation of these designs, ensuring meticulous attention to detail during the construction and installation phase." imageUrl="https://sidorluxury.com/assets/images/services/s3.jpg" />
                     </div>
                 </div>
             </div>
