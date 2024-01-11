@@ -54,7 +54,7 @@ const ImageSlider = ({ images }) => {
               <img src={image} alt={`Slide ${index}`} className="w-full h-full object-cover" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="absolute inset-0 bg-black opacity-60"></div>
-                <h1 className="text-8xl font-bold text-white z-10">Welcome to <span ref={el}></span></h1>
+                <h1 className="text-8xl font-bold text-white z-10">Welcome to <span className='block md:inline' ref={el}></span></h1>
               </div>
             </div>         
           </SwiperSlide>

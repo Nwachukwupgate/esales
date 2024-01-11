@@ -1,7 +1,8 @@
-import React from 'react';
+import {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [nav, setNav] = useState(false)
 
     const primaryColors = {
       50: '#eff6ff',
@@ -46,6 +47,7 @@ const Header = () => {
               className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="mobile-menu-2"
               aria-expanded="false"
+              onClick={() => setNav(!nav)}
             >
               <span className="sr-only">Open main menu</span>
               <svg
@@ -75,7 +77,7 @@ const Header = () => {
             </button>
           </div>
           <div
-            className="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
+            className={`${nav ? 'z-50' : 'hidden'} justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
             id="mobile-menu-2"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
